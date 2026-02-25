@@ -1,0 +1,49 @@
+{
+  "source_url": "https://example.org/wiki/jetson-jp6-demo",
+  "hardware_requirements": [
+    "NVIDIA Jetson AGX Orin 32GB",
+    "USB camera",
+    "20GB free storage"
+  ],
+  "software_requirements": [
+    "JetPack 6.2",
+    "CUDA 12.2",
+    "Python >= 3.10",
+    "PyTorch 2.4",
+    "ONNX Runtime 1.19"
+  ],
+  "version_constraints": [
+    {
+      "component": "jetpack",
+      "operator": "==",
+      "version": "6.2",
+      "evidence": "JetPack 6.2"
+    },
+    {
+      "component": "cuda",
+      "operator": "==",
+      "version": "12.2",
+      "evidence": "CUDA 12.2"
+    },
+    {
+      "component": "python",
+      "operator": ">=",
+      "version": "3.10",
+      "evidence": "Python >= 3.10"
+    },
+    {
+      "component": "pytorch",
+      "operator": "==",
+      "version": "2.4",
+      "evidence": "PyTorch 2.4"
+    },
+    {
+      "component": "onnxruntime",
+      "operator": "==",
+      "version": "1.19",
+      "evidence": "ONNX Runtime 1.19"
+    }
+  ],
+  "notes": [],
+  "confidence": 0.95
+}

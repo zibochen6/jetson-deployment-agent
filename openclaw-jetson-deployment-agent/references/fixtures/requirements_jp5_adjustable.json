@@ -1,0 +1,36 @@
+{
+  "source_url": "https://example.org/docs/jp5-adjustable-demo",
+  "hardware_requirements": [
+    "NVIDIA Jetson Xavier NX",
+    "USB camera"
+  ],
+  "software_requirements": [
+    "JetPack >= 5.0",
+    "Python >= 3.10",
+    "PyTorch 2.4"
+  ],
+  "version_constraints": [
+    {
+      "component": "jetpack",
+      "operator": ">=",
+      "version": "5.0",
+      "evidence": "JetPack >= 5.0"
+    },
+    {
+      "component": "python",
+      "operator": ">=",
+      "version": "3.10",
+      "evidence": "Python >= 3.10"
+    },
+    {
+      "component": "pytorch",
+      "operator": "==",
+      "version": "2.4",
+      "evidence": "PyTorch 2.4"
+    }
+  ],
+  "notes": [
+    "This fixture is intended to produce needs-adjustments on JP5.x."
+  ],
+  "confidence": 0.9
+}

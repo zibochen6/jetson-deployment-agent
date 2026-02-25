@@ -1,0 +1,35 @@
+{
+  "mode": "guided",
+  "allow_sudo": "yes",
+  "overall_status": "needs-adjustments",
+  "steps": [
+    {
+      "id": "step-001",
+      "command": "echo preflight-check",
+      "requires_sudo": false,
+      "risk_level": "low",
+      "rollback_hint": "none",
+      "verify_command": "echo preflight-verified",
+      "approval_required": false
+    },
+    {
+      "id": "step-002",
+      "command": "echo high-risk-change",
+      "requires_sudo": true,
+      "risk_level": "high",
+      "rollback_hint": "none",
+      "verify_command": "echo high-risk-verified",
+      "approval_required": true
+    },
+    {
+      "id": "step-003",
+      "command": "echo medium-change",
+      "requires_sudo": false,
+      "risk_level": "medium",
+      "rollback_hint": "none",
+      "verify_command": "echo medium-verified",
+      "approval_required": true
+    }
+  ],
+  "manual_prerequisites": []
+}
