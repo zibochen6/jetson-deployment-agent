@@ -1,0 +1,63 @@
+{
+  "overall_status": "needs-adjustments",
+  "facts_series": "5.x",
+  "issues": [
+    {
+      "component": "python",
+      "severity": "medium",
+      "message": "python does not satisfy requirement >= 3.10.",
+      "required": ">= 3.10",
+      "installed": "3.8.10",
+      "suggestion": "Use a project virtual environment and install compatible wheels.",
+      "evidence": "Python >= 3.10"
+    },
+    {
+      "component": "pytorch",
+      "severity": "medium",
+      "message": "pytorch version 2.4 is not in tested list for 5.x.",
+      "required": "== 2.4",
+      "installed": "supported list: ['2.0', '2.1']",
+      "suggestion": "Pin pytorch to 2.1 for 5.x.",
+      "evidence": "PyTorch 2.4"
+    }
+  ],
+  "alternatives": [
+    "Use a project virtual environment and install compatible wheels.",
+    "Pin pytorch to 2.1 for 5.x."
+  ],
+  "blocked_items": [],
+  "ready_items": [
+    {
+      "component": "hardware",
+      "required": [
+        "jetson xavier nx"
+      ],
+      "installed": "NVIDIA Jetson Xavier NX"
+    },
+    {
+      "component": "jetpack",
+      "required": ">= 5.0",
+      "installed": "5.1.2"
+    }
+  ],
+  "recommended_actions": [
+    {
+      "id": "action-001",
+      "summary": "Adjust python compatibility.",
+      "command": "python3 -m venv .venv && . .venv/bin/activate && python3 -m pip install --upgrade pip",
+      "requires_sudo": false,
+      "risk_level": "medium",
+      "rollback_hint": "Remove or recreate the virtual environment if needed.",
+      "verify_command": "python3 --version"
+    },
+    {
+      "id": "action-002",
+      "summary": "Pin pytorch to a 5.x compatible version.",
+      "command": "python3 -m pip install pytorch==2.1",
+      "requires_sudo": false,
+      "risk_level": "medium",
+      "rollback_hint": "Reinstall previous pytorch version if regression is observed.",
+      "verify_command": "python3 - <<'PY'\nimport importlib\nm=importlib.import_module('pytorch')\nprint(getattr(m, '__version__', 'unknown'))\nPY"
+    }
+  ]
+}

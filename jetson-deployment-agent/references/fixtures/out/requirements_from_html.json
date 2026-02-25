@@ -1,0 +1,64 @@
+{
+  "source_url": "file:///D:/project/demo_deploy_on_jetson/skills/jetson-deployment-agent/references/fixtures/tutorial_wikipedia_like.html",
+  "hardware_requirements": [
+    "Deploy Detector on Jetson AGX Orin",
+    "NVIDIA Jetson AGX Orin 32GB",
+    "USB camera or CSI camera",
+    "At least 20GB free storage"
+  ],
+  "software_requirements": [
+    "Ubuntu 22.04",
+    "JetPack 6.2",
+    "CUDA 12.2",
+    "Python >= 3.10",
+    "PyTorch 2.4",
+    "TensorRT 10",
+    "ONNX Runtime 1.19"
+  ],
+  "version_constraints": [
+    {
+      "component": "cuda",
+      "operator": "==",
+      "version": "12.2",
+      "evidence": "CUDA 12.2"
+    },
+    {
+      "component": "jetpack",
+      "operator": "==",
+      "version": "6.2",
+      "evidence": "JetPack 6.2"
+    },
+    {
+      "component": "onnxruntime",
+      "operator": "==",
+      "version": "1.19",
+      "evidence": "ONNX Runtime 1.19"
+    },
+    {
+      "component": "python",
+      "operator": ">=",
+      "version": "3.10",
+      "evidence": "Python >= 3.10"
+    },
+    {
+      "component": "pytorch",
+      "operator": "==",
+      "version": "2.4",
+      "evidence": "PyTorch 2.4"
+    },
+    {
+      "component": "tensorrt",
+      "operator": "==",
+      "version": "10",
+      "evidence": "TensorRT 10"
+    },
+    {
+      "component": "ubuntu",
+      "operator": "==",
+      "version": "22.04",
+      "evidence": "Ubuntu 22.04"
+    }
+  ],
+  "notes": [],
+  "confidence": 0.99
+}

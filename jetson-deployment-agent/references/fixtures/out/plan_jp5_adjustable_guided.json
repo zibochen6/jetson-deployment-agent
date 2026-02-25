@@ -1,0 +1,35 @@
+{
+  "mode": "guided",
+  "allow_sudo": "yes",
+  "overall_status": "needs-adjustments",
+  "generated_at": "2026-02-25T08:20:05.858998+00:00",
+  "steps": [
+    {
+      "id": "step-001",
+      "command": "echo \"Review available disk, memory, and network connectivity before deployment.\"",
+      "requires_sudo": false,
+      "risk_level": "low",
+      "rollback_hint": "No rollback needed for preflight review.",
+      "verify_command": "echo \"Preflight checklist reviewed.\""
+    },
+    {
+      "id": "step-002",
+      "command": "python3 -m venv .venv && . .venv/bin/activate && python3 -m pip install --upgrade pip",
+      "requires_sudo": false,
+      "risk_level": "medium",
+      "rollback_hint": "Remove or recreate the virtual environment if needed.",
+      "verify_command": "python3 --version",
+      "approval_required": true
+    },
+    {
+      "id": "step-003",
+      "command": "python3 -m pip install pytorch==2.1",
+      "requires_sudo": false,
+      "risk_level": "medium",
+      "rollback_hint": "Reinstall previous pytorch version if regression is observed.",
+      "verify_command": "python3 - <<'PY'\nimport importlib\nm=importlib.import_module('pytorch')\nprint(getattr(m, '__version__', 'unknown'))\nPY",
+      "approval_required": true
+    }
+  ],
+  "manual_prerequisites": []
+}

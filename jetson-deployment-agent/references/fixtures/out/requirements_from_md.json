@@ -1,0 +1,51 @@
+{
+  "source_url": "file:///D:/project/demo_deploy_on_jetson/skills/jetson-deployment-agent/references/fixtures/tutorial_generic.md",
+  "hardware_requirements": [
+    "# Generic Tutorial: Deploy Streaming App on Jetson Xavier NX",
+    "- NVIDIA Jetson Xavier NX",
+    "- 8GB RAM minimum",
+    "- 10GB free disk"
+  ],
+  "software_requirements": [
+    "- JetPack 5.1.2",
+    "- CUDA 11.4",
+    "- Python >= 3.8",
+    "- PyTorch 2.1",
+    "- ONNX Runtime 1.17",
+    "2. Run the app from a Python virtual environment."
+  ],
+  "version_constraints": [
+    {
+      "component": "cuda",
+      "operator": "==",
+      "version": "11.4",
+      "evidence": "- CUDA 11.4"
+    },
+    {
+      "component": "jetpack",
+      "operator": "==",
+      "version": "5.1.2",
+      "evidence": "- JetPack 5.1.2"
+    },
+    {
+      "component": "onnxruntime",
+      "operator": "==",
+      "version": "1.17",
+      "evidence": "- ONNX Runtime 1.17"
+    },
+    {
+      "component": "python",
+      "operator": ">=",
+      "version": "3.8",
+      "evidence": "- Python >= 3.8"
+    },
+    {
+      "component": "pytorch",
+      "operator": "==",
+      "version": "2.1",
+      "evidence": "- PyTorch 2.1"
+    }
+  ],
+  "notes": [],
+  "confidence": 0.99
+}

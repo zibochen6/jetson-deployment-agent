@@ -1,0 +1,37 @@
+{
+  "device": {
+    "model": "NVIDIA Jetson Xavier NX",
+    "arch": "aarch64"
+  },
+  "os": {
+    "pretty_name": "Ubuntu 20.04.6 LTS",
+    "kernel": "5.10.120-tegra"
+  },
+  "jetpack": {
+    "installed_version": "5.1.2",
+    "series": "5.x"
+  },
+  "l4t": {
+    "release": "R35",
+    "raw": "# R35 (release), REVISION: 4.1"
+  },
+  "cuda": {
+    "version": "11.4",
+    "nvcc_path": "/usr/local/cuda/bin/nvcc"
+  },
+  "python": {
+    "version": "3.8.10"
+  },
+  "memory": {
+    "mem_total_kb": 8126464,
+    "mem_total_gb": 7.75
+  },
+  "storage": {
+    "root_available_kb": 20971520,
+    "root_available_gb": 20.0
+  },
+  "package_managers": [
+    "apt",
+    "pip"
+  ]
+}

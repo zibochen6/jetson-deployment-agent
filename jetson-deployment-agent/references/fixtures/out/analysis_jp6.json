@@ -1,0 +1,42 @@
+{
+  "overall_status": "ready",
+  "facts_series": "6.x",
+  "issues": [],
+  "alternatives": [],
+  "blocked_items": [],
+  "ready_items": [
+    {
+      "component": "hardware",
+      "required": [
+        "jetson agx orin"
+      ],
+      "installed": "NVIDIA Jetson AGX Orin 32GB"
+    },
+    {
+      "component": "jetpack",
+      "required": "== 6.2",
+      "installed": "6.2"
+    },
+    {
+      "component": "cuda",
+      "required": "== 12.2",
+      "installed": "12.2"
+    },
+    {
+      "component": "python",
+      "required": ">= 3.10",
+      "installed": "3.10.12"
+    },
+    {
+      "component": "pytorch",
+      "required": "== 2.4",
+      "installed": "compatible with 6.x"
+    },
+    {
+      "component": "onnxruntime",
+      "required": "== 1.19",
+      "installed": "compatible with 6.x"
+    }
+  ],
+  "recommended_actions": []
+}

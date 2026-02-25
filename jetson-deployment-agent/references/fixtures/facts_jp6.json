@@ -1,0 +1,37 @@
+{
+  "device": {
+    "model": "NVIDIA Jetson AGX Orin 32GB",
+    "arch": "aarch64"
+  },
+  "os": {
+    "pretty_name": "Ubuntu 22.04.4 LTS",
+    "kernel": "5.15.148-tegra"
+  },
+  "jetpack": {
+    "installed_version": "6.2",
+    "series": "6.x"
+  },
+  "l4t": {
+    "release": "R36",
+    "raw": "# R36 (release), REVISION: 4.0"
+  },
+  "cuda": {
+    "version": "12.2",
+    "nvcc_path": "/usr/local/cuda/bin/nvcc"
+  },
+  "python": {
+    "version": "3.10.12"
+  },
+  "memory": {
+    "mem_total_kb": 32768000,
+    "mem_total_gb": 31.25
+  },
+  "storage": {
+    "root_available_kb": 104857600,
+    "root_available_gb": 100.0
+  },
+  "package_managers": [
+    "apt",
+    "pip"
+  ]
+}

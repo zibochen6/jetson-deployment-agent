@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jetson Deployment Agent"
+  short_description: "Analyze and automate NVIDIA Jetson deployments"
+  default_prompt: "Use $jetson-deployment-agent to analyze a deployment tutorial, check JetPack compatibility, and run a guided install."

@@ -1,0 +1,35 @@
+{
+  "source_url": "https://example.org/docs/jp6-only-demo",
+  "hardware_requirements": [
+    "NVIDIA Jetson AGX Orin"
+  ],
+  "software_requirements": [
+    "JetPack >= 6.0",
+    "CUDA >= 12.2",
+    "TensorRT 10"
+  ],
+  "version_constraints": [
+    {
+      "component": "jetpack",
+      "operator": ">=",
+      "version": "6.0",
+      "evidence": "JetPack >= 6.0"
+    },
+    {
+      "component": "cuda",
+      "operator": ">=",
+      "version": "12.2",
+      "evidence": "CUDA >= 12.2"
+    },
+    {
+      "component": "tensorrt",
+      "operator": "==",
+      "version": "10",
+      "evidence": "TensorRT 10"
+    }
+  ],
+  "notes": [
+    "This fixture is intended to produce blocked status on JP5.x."
+  ],
+  "confidence": 0.95
+}

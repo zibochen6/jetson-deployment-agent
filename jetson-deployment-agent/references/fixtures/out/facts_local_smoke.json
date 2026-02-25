@@ -1,0 +1,37 @@
+{
+  "device": {
+    "model": "x86_64",
+    "arch": "x86_64"
+  },
+  "os": {
+    "pretty_name": "Ubuntu 20.04.6 LTS",
+    "kernel": "6.6.87.1-microsoft-standard-WSL2"
+  },
+  "jetpack": {
+    "installed_version": "unknown",
+    "series": "unknown"
+  },
+  "l4t": {
+    "release": "unknown",
+    "raw": "unknown"
+  },
+  "cuda": {
+    "version": "unknown",
+    "nvcc_path": "unknown"
+  },
+  "python": {
+    "version": "3.8.10"
+  },
+  "memory": {
+    "mem_total_kb": 7885000,
+    "mem_total_gb": 7.52
+  },
+  "storage": {
+    "root_available_kb": 999970780,
+    "root_available_gb": 953.65
+  },
+  "package_managers": [
+    "apt",
+    "pip"
+  ]
+}

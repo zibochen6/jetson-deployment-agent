@@ -1,0 +1,26 @@
+{
+  "mode": "guided",
+  "allow_sudo": "yes",
+  "overall_status": "ready",
+  "generated_at": "2026-02-25T08:20:05.820566+00:00",
+  "steps": [
+    {
+      "id": "step-001",
+      "command": "echo \"Review available disk, memory, and network connectivity before deployment.\"",
+      "requires_sudo": false,
+      "risk_level": "low",
+      "rollback_hint": "No rollback needed for preflight review.",
+      "verify_command": "echo \"Preflight checklist reviewed.\""
+    },
+    {
+      "id": "step-002",
+      "command": "echo \"Compatibility check passed. Continue with project-specific install commands.\"",
+      "requires_sudo": false,
+      "risk_level": "low",
+      "rollback_hint": "No rollback needed.",
+      "verify_command": "echo \"Compatibility-ready state confirmed.\"",
+      "approval_required": false
+    }
+  ],
+  "manual_prerequisites": []
+}

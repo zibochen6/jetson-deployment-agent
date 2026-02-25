@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "mode": "guided",
+    "overall_status": "needs-adjustments",
+    "executed_steps": 1,
+    "skipped_steps": 2,
+    "failed_steps": 0,
+    "total_steps": 3,
+    "timestamp": "2026-02-25T08:21:46.869195+00:00"
+  },
+  "approval_log": [
+    {
+      "step_id": "step-001",
+      "risk_level": "low",
+      "requires_sudo": false,
+      "approved": true,
+      "decision_reason": "auto-approved-low"
+    },
+    {
+      "step_id": "step-002",
+      "risk_level": "high",
+      "requires_sudo": true,
+      "approved": false,
+      "decision_reason": "missing-high-approval"
+    },
+    {
+      "step_id": "step-003",
+      "risk_level": "medium",
+      "requires_sudo": false,
+      "approved": false,
+      "decision_reason": "missing-medium-approval"
+    }
+  ],
+  "results": [
+    {
+      "step_id": "step-001",
+      "status": "success",
+      "started_at": "2026-02-25T08:21:46.862359+00:00",
+      "ended_at": "2026-02-25T08:21:46.866000+00:00",
+      "command": "echo preflight-check",
+      "return_code": 0,
+      "stdout": "preflight-check\n",
+      "stderr": "",
+      "verify_command": "echo preflight-verified",
+      "verify_return_code": 0,
+      "verify_stdout": "preflight-verified\n",
+      "verify_stderr": ""
+    },
+    {
+      "step_id": "step-002",
+      "status": "skipped",
+      "reason": "missing-high-approval",
+      "command": "echo high-risk-change"
+    },
+    {
+      "step_id": "step-003",
+      "status": "skipped",
+      "reason": "missing-medium-approval",
+      "command": "echo medium-change"
+    }
+  ]
+}

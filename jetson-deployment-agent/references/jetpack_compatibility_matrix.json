@@ -1,0 +1,65 @@
+{
+  "jetpack_series": {
+    "5.x": {
+      "l4t_major": "35",
+      "ubuntu": "20.04",
+      "python": {
+        "min": "3.8",
+        "max": "3.10"
+      },
+      "cuda": {
+        "min": "11.4",
+        "max": "11.8"
+      },
+      "tensorrt_major": "8"
+    },
+    "6.x": {
+      "l4t_major": "36",
+      "ubuntu": "22.04",
+      "python": {
+        "min": "3.10",
+        "max": "3.12"
+      },
+      "cuda": {
+        "min": "12.2",
+        "max": "12.6"
+      },
+      "tensorrt_major": "10"
+    }
+  },
+  "component_support": {
+    "pytorch": {
+      "5.x": [
+        "2.0",
+        "2.1"
+      ],
+      "6.x": [
+        "2.3",
+        "2.4",
+        "2.5"
+      ]
+    },
+    "onnxruntime": {
+      "5.x": [
+        "1.16",
+        "1.17"
+      ],
+      "6.x": [
+        "1.18",
+        "1.19",
+        "1.20"
+      ]
+    }
+  },
+  "alternatives": {
+    "pytorch": {
+      "5.x": "Use torch 2.0-2.1 wheels tested on JetPack 5.x.",
+      "6.x": "Use torch 2.3-2.5 wheels tested on JetPack 6.x."
+    },
+    "onnxruntime": {
+      "5.x": "Pin onnxruntime to 1.16 or 1.17.",
+      "6.x": "Pin onnxruntime to 1.18-1.20."
+    },
+    "jetpack_major_mismatch": "Keep current major and use fallback commands, or reflash if the tutorial strictly requires the other major."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "overall_status": "blocked",
+  "facts_series": "5.x",
+  "issues": [],
+  "alternatives": [
+    "Use a tutorial that targets the current Jetson model, or switch hardware.",
+    "Keep current major and use fallback commands, or reflash if the tutorial strictly requires the other major.",
+    "Use a cuda version within 5.x supported range (11.4 to 11.8).",
+    "Use TensorRT major 8 for 5.x."
+  ],
+  "blocked_items": [
+    {
+      "component": "hardware",
+      "message": "Tutorial targets ['jetson agx orin'], but device is 'NVIDIA Jetson Xavier NX'.",
+      "required": [
+        "jetson agx orin"
+      ],
+      "installed": "NVIDIA Jetson Xavier NX"
+    },
+    {
+      "component": "jetpack",
+      "message": "JetPack major too low: requires 6.x or newer, found 5.x.",
+      "required": ">= 6.0",
+      "installed": "5.1.2",
+      "evidence": "JetPack >= 6.0"
+    },
+    {
+      "component": "cuda",
+      "message": "cuda requirement >= 12.2 exceeds 5.x range (max 11.8).",
+      "required": ">= 12.2",
+      "installed": "11.4",
+      "evidence": "CUDA >= 12.2"
+    },
+    {
+      "component": "tensorrt",
+      "message": "TensorRT major 10 is incompatible with 5.x expected major 8.",
+      "required": "== 10",
+      "installed": "expected major 8",
+      "evidence": "TensorRT 10"
+    }
+  ],
+  "ready_items": [],
+  "recommended_actions": [
+    {
+      "id": "action-001",
+      "summary": "Escalate JetPack major upgrade decision.",
+      "command": "echo \"Manual decision required: tutorial needs newer JetPack major.\"",
+      "requires_sudo": false,
+      "risk_level": "high",
+      "rollback_hint": "No state changed by this placeholder action.",
+      "verify_command": "echo \"Verify upgrade or fallback decision is approved.\""
+    },
+    {
+      "id": "action-002",
+      "summary": "Resolve unsupported cuda requirement.",
+      "command": "echo \"Manual action required: adjust cuda requirement to 5.x supported range.\"",
+      "requires_sudo": true,
+      "risk_level": "high",
+      "rollback_hint": "No state changed by this placeholder action.",
+      "verify_command": "echo \"Verify cuda requirement now fits 5.x range.\""
+    },
+    {
+      "id": "action-003",
+      "summary": "Resolve TensorRT major mismatch.",
+      "command": "echo \"Use TensorRT major 8 to match 5.x.\"",
+      "requires_sudo": true,
+      "risk_level": "high",
+      "rollback_hint": "No state changed by this placeholder action.",
+      "verify_command": "echo \"Verify TensorRT major compatibility.\""
+    }
+  ]
+}

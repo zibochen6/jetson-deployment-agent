@@ -1,0 +1,55 @@
+{
+  "mode": "plan",
+  "allow_sudo": "no",
+  "overall_status": "blocked",
+  "generated_at": "2026-02-25T08:20:05.901954+00:00",
+  "steps": [
+    {
+      "id": "step-001",
+      "command": "echo \"Review available disk, memory, and network connectivity before deployment.\"",
+      "requires_sudo": false,
+      "risk_level": "low",
+      "rollback_hint": "No rollback needed for preflight review.",
+      "verify_command": "echo \"Preflight checklist reviewed.\""
+    },
+    {
+      "id": "step-002",
+      "command": "echo \"Manual decision required: tutorial needs newer JetPack major.\"",
+      "requires_sudo": false,
+      "risk_level": "high",
+      "rollback_hint": "No state changed by this placeholder action.",
+      "verify_command": "echo \"Verify upgrade or fallback decision is approved.\"",
+      "approval_required": false
+    },
+    {
+      "id": "step-003",
+      "command": "echo \"Manual sudo prerequisite: echo \"Manual action required: adjust cuda requirement to 5.x supported range.\"\"",
+      "requires_sudo": false,
+      "risk_level": "high",
+      "rollback_hint": "No command executed because sudo is disabled.",
+      "verify_command": "echo \"Manual prerequisite recorded.\"",
+      "approval_required": false
+    },
+    {
+      "id": "step-004",
+      "command": "echo \"Manual sudo prerequisite: echo \"Use TensorRT major 8 to match 5.x.\"\"",
+      "requires_sudo": false,
+      "risk_level": "high",
+      "rollback_hint": "No command executed because sudo is disabled.",
+      "verify_command": "echo \"Manual prerequisite recorded.\"",
+      "approval_required": false
+    }
+  ],
+  "manual_prerequisites": [
+    {
+      "id": "step-003",
+      "original_command": "echo \"Manual action required: adjust cuda requirement to 5.x supported range.\"",
+      "reason": "allow-sudo=no"
+    },
+    {
+      "id": "step-004",
+      "original_command": "echo \"Use TensorRT major 8 to match 5.x.\"",
+      "reason": "allow-sudo=no"
+    }
+  ]
+}
